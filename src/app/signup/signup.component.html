@@ -1,12 +1,12 @@
 <body>
-
-  <h2> Signup </h2>
+ <div class="start-container">
+  <h2 style="align-content: center;"> Signup </h2>
 
   <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
-
+</div>
   <div id="id01" class="modal">
     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-    <form class="modal-content" action="/action_page.php" (ngSubmit)="onSubmit()">
+    <form class="modal-content" action="/action_page.php" (ngSubmit)="onSubmit(f)" #f="ngForm">
       <div class="container">
         <h1>Sign Up</h1>
         <p>Please fill in this form to create an account.</p>
@@ -28,7 +28,8 @@
 
         <div class="clearfix">
           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <button type="submit" class="signupbtn">Sign Up</button>
+          <button type="submit" class="signupbtn"
+          [disabled]="!f.valid">Sign Up</button>
         </div>
       </div>
     </form>
