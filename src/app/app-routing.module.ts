@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ToDoComponent } from './to-do/to-do.component';
+import { SignupComponent } from './signup/signup.component';
+
 
 const routes: Routes = [
-  {path : '', component:ToDoComponent}
+  {path : '', component: SignupComponent}
 ];
 
 @NgModule({
