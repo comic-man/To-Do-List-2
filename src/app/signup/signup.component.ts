@@ -1,3 +1,4 @@
+import { HttpClient} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -12,9 +13,13 @@ export class SignupComponent implements OnInit {
     console.log(form);
   }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+  }
+  onSignUp(signUp: { title:string; content: string}) {
+    this.http.post ('https://todolist-a6062-default-rtdb.firebaseio.com/signup.json',
+    signUp);
   }
 
 }
