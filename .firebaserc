@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "todolist-a6062": {
+      "hosting": {
+        "To-Do-List": [
+          "todolist-a6062"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "todolist-a6062"
+  }
+}
